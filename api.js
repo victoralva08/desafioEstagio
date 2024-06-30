@@ -19,5 +19,5 @@ api.post('/api/saque', caixaPath) // Requisição do método POST para o path es
 
 const port = 5000
 api.listen(port, () => {
-    console.log(`Servidor inciado em http://localhost:${port}/api/saque`)
+    console.log(`Servidor iniciado em http://localhost:${port}/api/saque`)
 })
