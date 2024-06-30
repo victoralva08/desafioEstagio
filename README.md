@@ -61,9 +61,9 @@ Em relação à lógica desenvolvida para o desafio de contagem de cédulas, a s
 Logo, se, por exemplo, o valor fosse maior que R$100, o código executava o bloco a partir da condição ```valor >= 100```, dividia o valor por 100 e acrescentava o resultado (arredondado) na quantidade de cédulas de 100. Valor, em seguida, recebia o resto dessa mesma divisão. Se o valor restante agora estivesse entre 99 e 50, por exemplo, o código sob a condição ```valor >= 50``` seria executado, dividindo o valor por 50 e acrescentando o resultado (arredondado) na quantidade de cédulas de 50.
 Essa lógica se repetia até que valor fosse igual 0.
 
-Embora fosse funcional e bastante legível, o código até então se mostrava pouco elegante e com uma quantidade desnecessária de estruturas de ```if``` e ```else```. Além disso, foram reservadas sete variáveis referentes às cédulas disponíveis.
+Embora fosse funcional e bastante legível, o código até então se mostrava pouco elegante e com uma quantidade desnecessária de estruturas de ```if``` e ```else```. Além disso, foram reservadas seis variáveis referentes às cédulas disponíveis.
 
-Para corrigir isso, ao invés de designar sete variáveis referentes às cédulas disponíveis, os tipos de notas foram armazenados em um array (```notas```) para ser percorrido. O resultado também era armazenado num novo array, em que as posições (índices) correspondiam aos índices do tipo de cédula no array que as continha.
+Para corrigir isso, ao invés de designar seis variáveis referentes às cédulas disponíveis, os tipos de notas foram armazenados em um array (```notas```) para ser percorrido. O resultado também era armazenado num novo array, em que as posições (índices) correspondiam aos índices do tipo de cédula no array que as continha.
 
 Com isso, se solucionou o problema de muitas condicionais e o código se tornou mais enxuto e elegante.
 
