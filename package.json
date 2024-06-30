@@ -1,13 +1,13 @@
 {
   "name": "desafio-estagio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Uma API para simulação de um caixa eletrônico",
   "main": "api.ts",
   "scripts": {
     "test": "jest",
     "start": "node api.js"
   },
-  "author": "",
+  "author": "Victor F. Alvarenga",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
