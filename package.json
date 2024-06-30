@@ -1,7 +1,7 @@
 {
   "name": "desafio-estagio",
   "version": "1.0.0",
-  "description": "Uma API para simulação de um caixa eletrônico",
+  "description": "API para simulação de um caixa eletrônico",
   "main": "api.ts",
   "scripts": {
     "test": "jest",
