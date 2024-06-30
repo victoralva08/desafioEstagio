@@ -9,6 +9,9 @@ const contaQuantidadeCelulas = (req, res) => {
         return res.status(400).json({"Erro": "Valor deve ser um número inteiro positivo."})
     } 
     
+    if (valor == 1)
+        return res.status(400).json({"Erro": "Não é possível gerar cédulas para este valor."}) // se valor for igual a 1, eh impossivel compor o valor total a partir das celulas disponiveis, pois nao ha um cedula com o valor 1.
+    
     const notas = [100, 50, 20, 10, 5, 2] // array que contem as cedulas disponiveis
     const qntdNotas = [0, 0, 0, 0, 0, 0] // array para armezanar a quantidade respectiva de cada cedula para reunir o valor total requisitado
     
@@ -16,8 +19,6 @@ const contaQuantidadeCelulas = (req, res) => {
     // o loop percorre por cada tipo de cedula disponivel
     for (let i = 0; i < notas.length; i++) { 
 
-        if (valor == 1)
-            return res.status(400).json({"Erro": "Não é possível gerar cédulas para este valor."}) // se valor for igual a 1, eh impossivel compor o valor total a partir das celulas disponiveis, pois nao ha um cedula com o valor 1.
 
         /* verifica se o valor atual eh maior ou igual ao valor da nota correspondente durante a iteracao. Se o valor for menor que a nota atual, a quantidade de notas do tipo correspondente permanece 0 no array qntdNotas (pois nao eh preciso nenhuma cedula do tipo atual)  */   
         if (valor >= notas[i]) {
